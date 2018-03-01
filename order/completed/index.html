@@ -10,10 +10,20 @@
 
 		// demo initializer
 		var demo = function () {
-			var ewData = ' {"RecordID": 1, "slug": "don-hang-thu-ba", "title": "Đơn Hàng Thứ ba", "tenKhachHang": "Khách Hàng Thứ Nhất",  "userId" : "nhanvien01", "tenNhanVien": "Nguyễn Văn A", "status" : "order.completed", "tenTrangThai" : "Hoàn Thành", "date": "29-12-2017 09:52" },';
-			var array = '[' + ewData.slice(0, -1) + ']';
-			var dataJSONArray = JSON.parse(array);
+            var listData = [];
+            var item = {};
 
+                item = {};
+                item["RecordID"] = "1"; 
+                item["slug"] = "don-hang-thu-ba";
+                item["title"] = "Đơn Hàng Thứ ba";
+                item["tenKhachHang"] = "Khách Hàng Thứ Nhất";
+                item["tenNhanVien"] = "Nguyễn Văn A";
+                item["date"] = "29-12-2017";
+                item["tenTrangThai"] = "Hoàn Thành";
+                listData.push(item);
+
+            var dataJSONArray = listData;  // JSON.parse(array);
 			var datatable = $('.m_datatable').mDatatable({
 				// datasource definition
 				data: {

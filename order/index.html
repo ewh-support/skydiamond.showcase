@@ -10,10 +10,47 @@
 
 		// demo initializer
 		var demo = function () {
-			var ewData = ' {"RecordID": 1, "slug": "don-hang-thu-4", "title": "Đơn Hàng thứ 4", "tenKhachHang": "Khách Hàng Thứ Hai",  "userId" : "nhanvien02", "tenNhanVien": "Nguyễn Văn B", "status" : "order.verified", "tenTrangThai" : "Đã Kiểm Tra", "date": "29-12-2017 09:53" }, {"RecordID": 2, "slug": "don-hang-thu-ba", "title": "Đơn Hàng Thứ ba", "tenKhachHang": "Khách Hàng Thứ Nhất",  "userId" : "nhanvien01", "tenNhanVien": "Nguyễn Văn A", "status" : "order.completed", "tenTrangThai" : "Hoàn Thành", "date": "29-12-2017 09:52" }, {"RecordID": 3, "slug": "don-hang-thu-hai", "title": "Đơn hàng thứ hai", "tenKhachHang": "Khách Hàng Thứ Nhất",  "userId" : "nhanvien01", "tenNhanVien": "Nguyễn Văn A", "status" : "order.approved", "tenTrangThai" : "Đã Thanh Toán", "date": "29-12-2017 09:40" }, {"RecordID": 4, "slug": "don-hang-dau-tien", "title": "Đơn hàng đầu tiên", "tenKhachHang": "Khách Hàng Thứ Hai",  "userId" : "nhanvien02", "tenNhanVien": "Nguyễn Văn B", "status" : "order.ordernew", "tenTrangThai" : "Mới", "date": "29-12-2017 09:39" },';
-			var array = '[' + ewData.slice(0, -1) + ']';
-			var dataJSONArray = JSON.parse(array);
+            var listData = [];
+            var item = {};
 
+                item = {};
+                item["RecordID"] = "1"; 
+                item["slug"] = "don-hang-thu-4";
+                item["title"] = "Đơn Hàng thứ 4";
+                item["tenKhachHang"] = "Khách Hàng Thứ Hai";
+                item["tenNhanVien"] = "Nguyễn Văn B";
+                item["date"] = "29-12-2017";
+                item["tenTrangThai"] = "Đã Kiểm Tra";
+                listData.push(item);
+                item = {};
+                item["RecordID"] = "2"; 
+                item["slug"] = "don-hang-thu-ba";
+                item["title"] = "Đơn Hàng Thứ ba";
+                item["tenKhachHang"] = "Khách Hàng Thứ Nhất";
+                item["tenNhanVien"] = "Nguyễn Văn A";
+                item["date"] = "29-12-2017";
+                item["tenTrangThai"] = "Hoàn Thành";
+                listData.push(item);
+                item = {};
+                item["RecordID"] = "3"; 
+                item["slug"] = "don-hang-thu-hai";
+                item["title"] = "Đơn hàng thứ hai";
+                item["tenKhachHang"] = "Khách Hàng Thứ Nhất";
+                item["tenNhanVien"] = "Nguyễn Văn A";
+                item["date"] = "29-12-2017";
+                item["tenTrangThai"] = "Đã Thanh Toán";
+                listData.push(item);
+                item = {};
+                item["RecordID"] = "4"; 
+                item["slug"] = "don-hang-dau-tien";
+                item["title"] = "Đơn hàng đầu tiên";
+                item["tenKhachHang"] = "Khách Hàng Thứ Hai";
+                item["tenNhanVien"] = "Nguyễn Văn B";
+                item["date"] = "29-12-2017";
+                item["tenTrangThai"] = "Mới";
+                listData.push(item);
+
+            var dataJSONArray = listData;  // JSON.parse(array);
 			var datatable = $('.m_datatable').mDatatable({
 				// datasource definition
 				data: {
