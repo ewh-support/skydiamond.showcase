@@ -90,7 +90,7 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
 
 body {
   margin: 0;
-  font-family: "Poppins";
+  /* font-family: "Poppins"; */
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -7461,7 +7461,7 @@ body {
   padding: 0px;
   font-size: 14px;
   font-weight: 300;
-  font-family: Poppins;
+  /* font-family: Poppins; */
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
